@@ -1,0 +1,1359 @@
+<style>
+  /*------ styles to remove top banners, nav, and padding/margins that would prevent background from being full screen ------*/
+
+  #header-content {
+    display: none !important;
+  }
+
+  #body-content {
+    width: 100% !important;
+  }
+
+  #material-687611 .material-container {
+    margin: 0;
+    padding: 0;
+    background-color: #052f5f;
+  }
+
+  #library-142318 div.webaccess-section-title {
+    display: none !important;
+  }
+
+  .homescreen-content.directory .directory-page-title {
+    display: none !important;
+  }
+
+  .directories34461 #content {
+    height: 100vh;
+  }
+
+  .directories34461 .directory-detail-container {
+    margin: 0 !important;
+  }
+  /*------ helpers ------*/
+
+  .space {
+    width: 100%;
+    height: 100%;
+  }
+  /*------ booth features ------*/
+
+  div.sponsorBoothWrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  img.eBackground {
+    width: 100%;
+  }
+
+  .logoContainer {
+    position: absolute;
+    width: 14.7%;
+    height: 14%;
+    top: 5.5%;
+    left: 10.5%;
+    text-align: center;
+  }
+
+  .logoContainer img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .websiteContainer {
+    position: absolute;
+    width: 14.7%;
+    height: 4.5%;
+    top: 20.1%;
+    left: 10.5%;
+  }
+
+  .messagePosterContainer {
+    position: absolute;
+    width: 22.6%;
+    height: 45.31%;
+    top: 28.9%;
+    left: 7.9%;
+  }
+
+  .messagePosterContainer img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+  }
+
+  .downloadCenter {
+    position: absolute;
+    width: 3.3%;
+    height: 5.8%;
+    top: 75.5%;
+    left: 9.92%;
+    border-radius: 50%;
+  }
+
+  .downloadCenter:hover {
+    cursor: pointer;
+  }
+
+  .videoContainer {
+    position: absolute;
+    top: 5.6%;
+    left: 38.5%;
+    width: 29.8%;
+    height: 29.8%;
+    padding: 0;
+  }
+
+  div.videoContainer iframe {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .featuredVideoTitle {
+    position: absolute;
+    width: 30.5%;
+    height: 2.3%;
+    top: 36.9%;
+    left: 38%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 1vw;
+  }
+
+  .videoControls {
+    position: absolute;
+    top: 17.2%;
+    left: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 14.1%;
+    width: 2.9%;
+  }
+
+  .videoControls div {
+    height: 36%;
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  .videoControls div:hover {
+    cursor: pointer;
+  }
+
+  .moreVideos {
+    position: absolute;
+    top: 44.5%;
+    left: 37.1%;
+    width: 13.2%;
+    height: 32.5%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .moreVideos > div {
+    height: 20.7%;
+    width: 43%;
+    position: relative;
+  }
+
+  .moreVideos img {
+    width: 100%;
+  }
+
+  .moreVideos img:hover {
+    cursor: pointer;
+  }
+
+  .moreVideos div div {
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    position: relative;
+    font-size: 0.66vw;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .gameContainer {
+    position: absolute;
+    top: 45.2%;
+    left: 53.9%;
+    width: 20%;
+    height: 21%;
+  }
+
+  .gameContainer:-webkit-full-screen {
+    object-fit: contain;
+    position: fixed !important;
+    top: 0px !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    box-sizing: border-box !important;
+    min-width: 0px !important;
+    max-width: none !important;
+    min-height: 0px !important;
+    max-height: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    margin: 0px !important;
+  }
+
+  .gameContainer iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gameControls {
+    position: absolute;
+    top: 68.8%;
+    left: 53.7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.1%;
+    width: 20.3%;
+  }
+
+  .gameControls > div {
+    height: 100%;
+    width: 14%;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .playQuiz,
+  .fullScreenGame {
+    position: relative;
+    left: -3%;
+  }
+
+  .liveVideoRooms {
+    position: absolute;
+    top: 14%;
+    left: 74.4%;
+    width: 15.3%;
+    height: 11.5%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .liveVideoRooms .room1 {
+    width: 53%;
+    height: 100%;
+    border-radius: 7px;
+  }
+
+  .liveVideoRooms .room2 {
+    width: 43.2%;
+    height: 86%;
+    margin-left: 3.8%;
+    border-radius: 7px;
+  }
+
+  .vMeet {
+    position: absolute;
+    width: 12%;
+    height: 14.9%;
+    top: 28.5%;
+    left: 81.64%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .repImageContainer {
+    height: 53%;
+    width: 38%;
+    margin-left: 23%;
+    border-radius: 50%;
+  }
+
+  .repImageContainer img {
+    width: 100%;
+    border-radius: inherit;
+  }
+
+  .repImageInfo {
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    height: 47%;
+    margin-left: 9%;
+    font-weight: 700;
+    font-size: 0.8vw;
+    position: relative;
+    top: 32%; /*align-items: flex-end;*/
+  }
+
+  .repImageInfo .eRepName1 {
+    line-height: 1.2em;
+  }
+
+  .maestroChatContainer {
+    position: absolute;
+    width: 12.54%;
+    height: 37.3%;
+    top: 43.8%;
+    left: 81.66%;
+  }
+
+  .maestroChatContainer .exhibitorPanel {
+    height: 100%;
+    width: 100%;
+  }
+
+  .bottomNavigation {
+    position: absolute;
+    top: 88.65%;
+    left: 42.6%;
+    height: 5.6%;
+    width: 14.8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bottomNavigation div {
+    border-radius: 50%;
+    width: 21.5%;
+    height: 100%;
+  }
+
+  .bottomNavigation div a div {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .questionContainer {
+    position: absolute;
+    top: 91%;
+    left: 74.5%;
+    height: 9%;
+    width: 24%;
+  }
+
+  .questionContainer #questionIframe {
+    height: 100%;
+    width: 100%;
+  }
+  /*------ modal styles ------*/
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    color: #232c61;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #232c61;
+    border-radius: 10px;
+    width: 40%;
+  }
+
+  .modal-content a {
+    text-decoration: none;
+    color: #232c61;
+  }
+
+  .modal-content a:visited {
+    color: #232c61;
+  }
+
+  .modal-content a:hover {
+    color: #26a3dd;
+  }
+
+  .modal-content .download-file {
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  .close-button {
+    color: #aaa;
+    text-align: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+
+<div class="sponsorBoothWrapper">
+  <img src="" class="eBackground" />
+
+  <div class="logoContainer">
+    <img class="eLogo" src="" />
+  </div>
+
+  <a class="eWebsite" href="" target="_blank">
+    <div
+      class="websiteContainer scoreable"
+      data-action="website"
+      data-points="10"
+    ></div>
+  </a>
+
+  <div class="messagePosterContainer">
+    <img class="eMessagePoster" src="" />
+  </div>
+
+  <div class="downloadCenter" id="downloads-button"></div>
+  <div class="modal" id="downloads-modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+
+      <h2>DOWNLOAD CENTER</h2>
+      <a class="eDownloadLink1" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName1 scoreable"
+            data-action="download1"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink2" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName2 scoreable"
+            data-action="download2"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink3" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName3 scoreable"
+            data-action="download3"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink4" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName4 scoreable"
+            data-action="download4"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink5" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName5 scoreable"
+            data-action="download5"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink6" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName6 scoreable"
+            data-action="download6"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink7" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName7 scoreable"
+            data-action="download7"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink8" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName8 scoreable"
+            data-action="download8"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink9" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName9 scoreable"
+            data-action="download9"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink10" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName10 scoreable"
+            data-action="download10"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink11" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName11 scoreable"
+            data-action="download11"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink12" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName12 scoreable"
+            data-action="download12"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink13" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName13 scoreable"
+            data-action="download13"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+
+      <a class="eDownloadLink14" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName14 scoreable"
+            data-action="download14"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+      <a class="eDownloadLink15" download="" href="" target="_blank">
+        <div class="download-file">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span
+            class="eDownloadName15 scoreable"
+            data-action="download15"
+            data-points="20"
+          ></span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="videoContainer">
+    <iframe
+      id="featuredVideo"
+      class="eVideo"
+      src=""
+      data-type="asset"
+      frameborder="0"
+      allowfullscreen=""
+      allow="autoplay; fullscreen"
+      webkitallowfullscreen=""
+      mozallowfullscreen=""
+    ></iframe>
+  </div>
+
+  <span class="eFullVideoTitle1 featuredVideoTitle"></span>
+  <span class="eFullVideoTitle1 hidden"></span>
+  <span class="eFullVideoTitle2 hidden"></span>
+  <span class="eFullVideoTitle3 hidden"></span>
+  <span class="eFullVideoTitle4 hidden"></span>
+  <span class="eFullVideoTitle5 hidden"></span>
+  <span class="eFullVideoTitle6 hidden"></span>
+  <span class="eFullVideoTitle7 hidden"></span>
+  <span class="eFullVideoTitle8 hidden"></span>
+
+  <!--video controls-->
+  <div class="videoControls">
+    <!--play-->
+    <!--<div id="play-button" class="scoreable" data-points="5" data-action="featuredVideo"></div>-->
+    <!--full screen-->
+    <div id="fullscreen-button"></div>
+    <!--next video-->
+    <div id="next-button"></div>
+  </div>
+
+  <div class="moreVideos">
+    <div id="one">
+      <img
+        class="videoThumbnail1 scoreable"
+        data-points="1"
+        data-action="videoThumbnail1"
+        id=""
+        src=""
+      />
+      <div class="eVideoName1 vidName"></div>
+    </div>
+    <div id="two">
+      <img
+        class="videoThumbnail2 scoreable"
+        data-points="1"
+        data-action="videoThumbnail2"
+        id=""
+        src=""
+      />
+      <div class="eVideoName2 vidName"></div>
+    </div>
+    <div id="three">
+      <img
+        class="videoThumbnail3 scoreable"
+        data-points="1"
+        data-action="videoThumbnail3"
+        id=""
+        src=""
+      />
+      <div class="eVideoName3 vidName"></div>
+    </div>
+    <div id="four">
+      <img
+        class="videoThumbnail4 scoreable"
+        data-points="1"
+        data-action="videoThumbnail4"
+        id=""
+        src=""
+      />
+      <div class="eVideoName4 vidName"></div>
+    </div>
+    <div id="five">
+      <img
+        class="videoThumbnail5 scoreable"
+        data-points="1"
+        data-action="videoThumbnail5"
+        id=""
+        src=""
+      />
+      <div class="eVideoName5 vidName"></div>
+    </div>
+    <div id="six">
+      <img
+        class="videoThumbnail6 scoreable"
+        data-points="1"
+        data-action="videoThumbnail6"
+        id=""
+        src=""
+      />
+      <div class="eVideoName6 vidName"></div>
+    </div>
+    <div id="seven">
+      <img
+        class="videoThumbnail7 scoreable"
+        data-points="1"
+        data-action="videoThumbnail7"
+        id=""
+        src=""
+      />
+      <div class="eVideoName7 vidName"></div>
+    </div>
+    <div id="eight">
+      <img
+        class="videoThumbnail8 scoreable"
+        data-points="1"
+        data-action="videoThumbnail8"
+        id=""
+        src=""
+      />
+      <div class="eVideoName8 vidName"></div>
+    </div>
+    <span class="eVideo1 hidden"></span><span class="eVideoIds1 hidden"></span>
+    <span class="eVideo2 hidden"></span><span class="eVideoIds2 hidden"></span>
+    <span class="eVideo3 hidden"></span><span class="eVideoIds3 hidden"></span>
+    <span class="eVideo4 hidden"></span><span class="eVideoIds4 hidden"></span>
+    <span class="eVideo5 hidden"></span><span class="eVideoIds5 hidden"></span>
+    <span class="eVideo6 hidden"></span><span class="eVideoIds6 hidden"></span>
+    <span class="eVideo7 hidden"></span><span class="eVideoIds7 hidden"></span>
+    <span class="eVideo8 hidden"></span><span class="eVideoIds8 hidden"></span>
+  </div>
+
+  <div class="gameContainer" id="gameContainer">
+    <iframe src="" class="eGameURL" frameborder="0"></iframe>
+    <iframe src="" class="eQuizURL hidden" frameborder="0"></iframe>
+  </div>
+
+  <div class="gameControls">
+    <div class="playGame scoreable" data-points="30" data-action="game"></div>
+    <div class="playQuiz scoreable" data-points="100" data-action="quiz"></div>
+    <div class="fullScreenGame" id="fullScreenGame"></div>
+    <div class="leaderboard">
+      <a href="">
+        <div class="space"></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="liveVideoRooms">
+    <div class="room1">
+      <a class="eVMeetLink" href="" target="_blank">
+        <div
+          class="space scoreable"
+          data-action="vMeet1"
+          data-points="10"
+        ></div>
+      </a>
+    </div>
+    <div class="room2">
+      <a class="eVMeetLink2" href="" target="_blank">
+        <div
+          class="space scoreable"
+          data-action="vMeet2"
+          data-points="10"
+        ></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="vMeet">
+    <div class="repImageContainer">
+      <img
+        src=""
+        class="eRepImage1 scoreable"
+        data-points="10"
+        data-action="vMeetChat"
+      />
+    </div>
+    <div class="repImageInfo"><span class="eRepName1"></span></div>
+  </div>
+
+  <div class="maestroChatContainer">
+    <div class="exhibitorPanel" id="maestro-exhibitor-iframe"></div>
+  </div>
+
+  <div class="bottomNavigation">
+    <!--home-->
+    <div>
+      <a class="eNav1" href="">
+        <div></div>
+      </a>
+    </div>
+    <!--booth area-->
+    <div>
+      <a class="eNav2" href="">
+        <div></div>
+      </a>
+    </div>
+    <!--help&faq-->
+    <div>
+      <a class="eNav3" href="">
+        <div></div>
+      </a>
+    </div>
+    <!--booth search-->
+    <div>
+      <a class="eNav4" href="">
+        <div></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="questionContainer">
+    <iframe
+      id="questionIframe"
+      class="eQuestion scoreable"
+      data-points="10"
+      data-action="question"
+      src=""
+      data-type="asset"
+      frameborder="0"
+    ></iframe>
+  </div>
+</div>
+
+<span class="hidden eMaestroSlug"></span>
+
+<!--play button for vimeo-->
+<!--<script>
+	$(document).ready(function()
+	{
+		var iframe = document.getElementById('featuredVideo');
+		var player = new Vimeo.Player(iframe);
+		var playButton = document.getElementById("play-button");
+
+		playButton.addEventListener("click", function()
+		{
+			player.play().catch(function(error)
+			{
+				console.error('error playing the video:', error.name);
+			});
+		});
+	});
+
+</script>-->
+
+<!--switch featured video-->
+<script>
+  $(".videoThumbnail1").click(function () {
+    let newSource = $(".eVideo1").text().trim();
+    let newTitle = $(".eFullVideoTitle1.hidden").text().trim();
+    $(".eVideo").attr("src", newSource);
+    $(".featuredVideoTitle").text(newTitle);
+  });
+  $(".videoThumbnail2").click(function () {
+    let newSource = $(".eVideo2").text().trim();
+    let newTitle = $(".eFullVideoTitle2.hidden").text().trim();
+    $(".eVideo").attr("src", newSource);
+    $(".featuredVideoTitle").text(newTitle);
+  });
+  $(".videoThumbnail3").click(function () {
+    let newSource = $(".eVideo3").text().trim();
+    let newTitle = $(".eFullVideoTitle3.hidden").text().trim();
+    $(".eVideo").attr("src", newSource);
+    $(".featuredVideoTitle").text(newTitle);
+  });
+  $(".videoThumbnail4").click(function () {
+    let newSource = $(".eVideo4").text().trim();
+    let newTitle = $(".eFullVideoTitle4.hidden").text().trim();
+    $(".eVideo").attr("src", newSource);
+    $(".featuredVideoTitle").text(newTitle);
+  });
+  $(".videoThumbnail5").click(function () {
+    let newSource = $(".eVideo5").text().trim();
+    let newTitle = $(".eFullVideoTitle5.hidden").text().trim();
+    $(".eVideo").attr("src", newSource);
+    $(".featuredVideoTitle").text(newTitle);
+  });
+  $(".videoThumbnail6").click(function () {
+    let newSource = $(".eVideo6").text().trim();
+    let newTitle = $(".eFullVideoTitle6.hidden").text().trim();
+    $(".eVideo").attr("src", newSource);
+    $(".featuredVideoTitle").text(newTitle);
+  });
+  $(".videoThumbnail7").click(function () {
+    let newSource = $(".eVideo7").text().trim();
+    let newTitle = $(".eFullVideoTitle7.hidden").text().trim();
+    $(".eVideo").attr("src", newSource);
+    $(".featuredVideoTitle").text(newTitle);
+  });
+  $(".videoThumbnail8").click(function () {
+    let newSource = $(".eVideo8").text().trim();
+    let newTitle = $(".eFullVideoTitle8.hidden").text().trim();
+    $(".eVideo").attr("src", newSource);
+    $(".featuredVideoTitle").text(newTitle);
+  });
+</script>
+
+<!--next video button-->
+<script>
+  let count = 1;
+
+  const one = $(".videoThumbnail1");
+  const two = $(".videoThumbnail2");
+  const three = $(".videoThumbnail3");
+  const four = $(".videoThumbnail4");
+  const five = $(".videoThumbnail5");
+  const six = $(".videoThumbnail6");
+  const seven = $(".videoThumbnail7");
+  const eight = $(".videoThumbnail8");
+
+  $(one).click(function () {
+    count = 1;
+    console.log("count: ", count);
+  });
+  $(two).click(function () {
+    count = 2;
+    console.log("count: ", count);
+  });
+  $(three).click(function () {
+    count = 3;
+    console.log("count: ", count);
+  });
+  $(four).click(function () {
+    count = 4;
+    console.log("count: ", count);
+  });
+  $(five).click(function () {
+    count = 5;
+    console.log("count: ", count);
+  });
+  $(six).click(function () {
+    count = 6;
+    console.log("count: ", count);
+  });
+  $(seven).click(function () {
+    count = 7;
+    console.log("count: ", count);
+  });
+  $(eight).click(function () {
+    count = 0;
+    console.log("count: ", count);
+  });
+
+  const nextButton = document.getElementById("next-button");
+  nextButton.addEventListener("click", function () {
+    if (count === 0) {
+      one.click();
+      count = 1;
+    } else if (count === 1) {
+      two.click();
+      count = 2;
+    } else if (count === 2) {
+      three.click();
+      count = 3;
+    } else if (count === 3) {
+      four.click();
+      count = 4;
+    } else if (count === 4) {
+      five.click();
+      count = 5;
+    } else if (count === 5) {
+      six.click();
+      count = 6;
+    } else if (count === 6) {
+      seven.click();
+      count = 7;
+    } else if (count === 7) {
+      eight.click();
+      count = 0;
+    }
+  });
+</script>
+
+<!--fullscreen video functionality-->
+<script>
+  const video = document.getElementById("featuredVideo");
+  const fullscreenButton = document.getElementById("fullscreen-button");
+  fullscreenButton.addEventListener("click", function () {
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.mozRequestFullScreen) {
+      /* Firefox */
+      video.mozRequestFullScreen();
+    } else if (video.webkitRequestFullscreen) {
+      /* Chrome, Safari & Opera */
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) {
+      /* IE/Edge */
+      video.msRequestFullscreen();
+    }
+  });
+</script>
+
+<!----video thumbnail generator---->
+<script>
+  $(document).ready(function () {
+    const thumbId1 = $(".eVideoIds1").text();
+    const thumbId2 = $(".eVideoIds2").text();
+    const thumbId3 = $(".eVideoIds3").text();
+    const thumbId4 = $(".eVideoIds4").text();
+    const thumbId5 = $(".eVideoIds5").text();
+    const thumbId6 = $(".eVideoIds6").text();
+    const thumbId7 = $(".eVideoIds7").text();
+    const thumbId8 = $(".eVideoIds8").text();
+
+    const id1 = thumbId1.split("/");
+    const id2 = thumbId2.split("/");
+    const id3 = thumbId3.split("/");
+    const id4 = thumbId4.split("/");
+    const id5 = thumbId5.split("/");
+    const id6 = thumbId6.split("/");
+    const id7 = thumbId7.split("/");
+    const id8 = thumbId8.split("/");
+
+    $(".videoThumbnail1").attr("id", `vimeo-${id1[0]}`);
+    $(".videoThumbnail2").attr("id", `vimeo-${id2[0]}`);
+    $(".videoThumbnail3").attr("id", `vimeo-${id3[0]}`);
+    $(".videoThumbnail4").attr("id", `vimeo-${id4[0]}`);
+    $(".videoThumbnail5").attr("id", `vimeo-${id5[0]}`);
+    $(".videoThumbnail6").attr("id", `vimeo-${id6[0]}`);
+    $(".videoThumbnail7").attr("id", `vimeo-${id7[0]}`);
+    $(".videoThumbnail8").attr("id", `vimeo-${id8[0]}`);
+
+    function vimeoLoadingThumb(id) {
+      var url =
+        "https://vimeo.com/api/oembed.json?url=https%3A%2F%2Fvimeo.com%2F" +
+        id[0] +
+        "%2F" +
+        id[1];
+
+      $.ajax({
+        type: "GET",
+        url: url,
+        dataType: "jsonp",
+        success: function (data) {
+          let thumbURL = data.thumbnail_url_with_play_button;
+          var id_img = "#vimeo-" + id[0];
+          $(id_img).attr("src", thumbURL);
+        },
+      });
+    }
+
+    $(function () {
+      if (id1 != " ") {
+        vimeoLoadingThumb(id1);
+      }
+      if (id2 != " ") {
+        vimeoLoadingThumb(id2);
+      }
+      if (id3 != " ") {
+        vimeoLoadingThumb(id3);
+      }
+      if (id4 != " ") {
+        vimeoLoadingThumb(id4);
+      }
+      if (id5 != " ") {
+        vimeoLoadingThumb(id5);
+      }
+      if (id6 != " ") {
+        vimeoLoadingThumb(id6);
+      }
+      if (id7 != " ") {
+        vimeoLoadingThumb(id7);
+      }
+      if (id8 != " ") {
+        vimeoLoadingThumb(id8);
+      }
+    });
+  });
+</script>
+
+<!----quiz/game toggle---->
+<script>
+  $(".playQuiz").click(function () {
+    $(".eGameURL").addClass("hidden");
+    $(".eQuizURL").removeClass("hidden");
+  });
+
+  $(".playGame").click(function () {
+    $(".eQuizURL").addClass("hidden");
+    $(".eGameURL").removeClass("hidden");
+  });
+</script>
+
+<!--fullscreen quiz/game functionality-->
+<script>
+  const gameWindow = document.getElementById("gameContainer");
+  const fullscreenGame = document.getElementById("fullScreenGame");
+  fullscreenGame.addEventListener("click", function () {
+    if (gameWindow.requestFullscreen) {
+      gameWindow.requestFullscreen();
+    } else if (gameWindow.mozRequestFullScreen) {
+      /* Firefox */
+      gameWindow.mozRequestFullScreen();
+    } else if (gameWindow.webkitRequestFullScreen) {
+      /* Chrome, Safari & Opera */
+      gameWindow.webkitRequestFullScreen();
+    } else if (gameWindow.msRequestFullscreen) {
+      /* IE/Edge */
+      gameWindow.msRequestFullscreen();
+    }
+  });
+</script>
+
+<script>
+  var modal = document.getElementById("downloads-modal");
+  var btn = document.getElementById("downloads-button");
+  var span = document.getElementsByClassName("close-button")[0];
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+<script>
+  // 'GAMIFICATION,' A DRAMEDY STARRING CRYSTAL ELSEY
+
+  let boothId = window.location.pathname.split("/").pop();
+  const floorCoveringBooths = ["327752067", "327752077"];
+
+  let pathRoute;
+  if (floorCoveringBooths.includes(boothId)) {
+    pathRoute = "floorcovering";
+  } else {
+    pathRoute = "platinum";
+  }
+  console.log(`Booth Path: ${pathRoute}`);
+  const routeCapitalized =
+    pathRoute.charAt(0).toUpperCase() + pathRoute.slice(1);
+
+  let userPath;
+  const getAttendeePath = () => {
+    return fetch(
+      `https://us-central1-sw-leaderboard.cloudfunctions.net/getAttendee?attendee=${userAttendeeId}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        userData = data;
+        return userData;
+      })
+      .then(function (userData) {
+        userPath = userData.points_path;
+      });
+  };
+
+  let user = {
+    event_attendee_id: userAttendeeId,
+    first_name: userFirstName,
+    last_name: userLastName,
+    attendee_type: userAttendeeType,
+    district: userDistrict,
+    division: userRegion,
+    points_path: "platinum",
+    path_complete: false,
+    points: 0,
+  };
+
+  $(document).ready(function () {
+    if (boothId === "327752067" || boothId === "327752077") {
+      $.ajax({
+        url: `https://us-central1-sw-leaderboard.cloudfunctions.net/recordPlatinumVisit?attendee=${userAttendeeId}&booth=${boothId}`,
+        type: "POST",
+        data: user,
+        headers: {
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Access-Control-Allow-Origin": "*",
+        },
+        complete: function (data, status) {
+          console.log(status + ": " + data.responseText);
+        },
+      });
+      $.ajax({
+        url: `https://us-central1-sw-leaderboard.cloudfunctions.net/recordFloorcoveringVisit?attendee=${userAttendeeId}&booth=${boothId}`,
+        type: "POST",
+        data: user,
+        headers: {
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Access-Control-Allow-Origin": "*",
+        },
+        complete: function (data, status) {
+          console.log(status + ": " + data.responseText);
+        },
+      });
+    } else {
+      getAttendeePath().then(function () {
+        if (userPath === pathRoute) {
+          $.ajax({
+            url: `https://us-central1-sw-leaderboard.cloudfunctions.net/record${routeCapitalized}Visit?attendee=${userAttendeeId}&booth=${boothId}`,
+            type: "POST",
+            data: user,
+            headers: {
+              "Access-Control-Allow-Headers": "Content-Type",
+              "Content-Type": "application/x-www-form-urlencoded",
+              "Access-Control-Allow-Origin": "*",
+            },
+            complete: function (data, status) {
+              console.log(status + ": " + data.responseText);
+            },
+          });
+        } else if (userPath !== pathRoute) {
+          $.ajax({
+            url: `https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
+            type: "POST",
+            dataType: "json",
+            data: user,
+            headers: {
+              "Access-Control-Allow-Headers": "Content-Type",
+              "Content-Type": "application/x-www-form-urlencoded",
+              "Access-Control-Allow-Origin": "*",
+            },
+            complete: function (data, status) {
+              if (data.responseJSON === true) {
+                $.ajax({
+                  url: `https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=30&attendee=${userAttendeeId}&awarded=platinum${boothId}`,
+                  type: "POST",
+                  headers: {
+                    "Access-Control-Allow-Headers": "Content-Type",
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Access-Control-Allow-Origin": "*",
+                  },
+                  complete: function (data, status) {
+                    console.log(status + ": " + data.responseText);
+                  },
+                });
+              } else if (data.responseJSON === false) {
+                console.log("Booth visit requirements not met");
+              } else {
+                console.log("Error getting path status");
+              }
+            },
+          });
+        }
+      });
+    }
+  });
+
+  $(".scoreable").click(function (e) {
+    let clickId = e.target.dataset.action;
+    let points = e.target.dataset.points;
+    let awarded = boothId + clickId;
+    $.ajax({
+      url: `https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
+      type: "POST",
+      dataType: "json",
+      data: user,
+      headers: {
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Access-Control-Allow-Origin": "*",
+      },
+      complete: function (data, status) {
+        if (data.responseJSON === true) {
+          $.ajax({
+            url: `https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=${points}&attendee=${userAttendeeId}&awarded=${awarded}`,
+            type: "POST",
+            headers: {
+              "Access-Control-Allow-Headers": "Content-Type",
+              "Content-Type": "application/x-www-form-urlencoded",
+              "Access-Control-Allow-Origin": "*",
+            },
+            complete: function (data, status) {
+              console.log(status + ": " + data.responseText);
+            },
+          });
+        } else if (data.responseJSON === false) {
+          console.log("Booth visit requirements not met");
+        } else {
+          console.log("Error getting path status");
+        }
+      },
+    });
+  });
+
+  focus();
+  var listener = window.addEventListener("blur", function () {
+    if (document.activeElement === document.getElementById("featuredVideo")) {
+      $.ajax({
+        url: `https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
+        type: "POST",
+        dataType: "json",
+        data: user,
+        headers: {
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Access-Control-Allow-Origin": "*",
+        },
+        complete: function (data, status) {
+          if (data.responseJSON === true) {
+            $.ajax({
+              url: `https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=5&attendee=${userAttendeeId}&awarded=${boothId}featuredVideo`,
+              type: "POST",
+              headers: {
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Access-Control-Allow-Origin": "*",
+              },
+              complete: function (data, status) {
+                console.log(status + ": " + data.responseText);
+              },
+            });
+          } else if (data.responseJSON === false) {
+            console.log("Booth visit requirements not met");
+          } else {
+            console.log("Error getting path status");
+          }
+        },
+      });
+    }
+    window.removeEventListener("blur", listener);
+  });
+
+  focus();
+  var listener = window.addEventListener("blur", function () {
+    if (document.activeElement === document.getElementById("questionIframe")) {
+      $.ajax({
+        url: `https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
+        type: "POST",
+        dataType: "json",
+        data: user,
+        headers: {
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Access-Control-Allow-Origin": "*",
+        },
+        complete: function (data, status) {
+          if (data.responseJSON === true) {
+            $.ajax({
+              url: `https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=10&attendee=${userAttendeeId}&awarded=${boothId}question`,
+              type: "POST",
+              headers: {
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Access-Control-Allow-Origin": "*",
+              },
+              complete: function (data, status) {
+                console.log(status + ": " + data.responseText);
+              },
+            });
+          } else if (data.responseJSON === false) {
+            console.log("Booth visit requirements not met");
+          } else {
+            console.log("Error getting path status");
+          }
+        },
+      });
+    }
+    window.removeEventListener("blur", listener);
+  });
+</script>
