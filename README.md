@@ -1,5 +1,7 @@
 # Project Info
-> Gamification code written for the virtual vendor show of a Fortune 500 Company
+
+> Implemented full-stack gamification for a 15k-attendee virtual conference for a Fortune 500 company
+
 
 ![](https://eventfinity-production-assets.s3.amazonaws.com/materials/986811/original/leaderboard.png)
 
@@ -30,6 +32,5 @@ This project was for paid employment, and is published with permission. All indi
 
 ## Contact Info
 
-![](https://eventfinity-production-assets.s3.amazonaws.com/materials/986811/original/leaderboard.png)  Crystal Elsey
-
+![](https://eventfinity-production-assets.s3.amazonaws.com/materials/986791/original/user-icon.png) Crystal Elsey
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
