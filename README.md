@@ -32,5 +32,5 @@ This project was for paid employment, and is published with permission. All indi
 
 ## Contact Info
 
-Email: hello@crystalelsey.com\s\s
+Email: hello@crystalelsey.com__
 Portfolio: http://crystal-codes.web.app/
