@@ -32,5 +32,5 @@ This project was for paid employment, and is published with permission. All indi
 
 ## Contact Info
 
-![](https://eventfinity-production-assets.s3.amazonaws.com/materials/986791/original/user-icon.png) Crystal Elsey
+![](https://eventfinity-production-assets.s3.amazonaws.com/materials/986821/original/user-icon.png) Crystal Elsey
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
