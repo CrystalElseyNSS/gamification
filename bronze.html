@@ -1,5 +1,7 @@
 <script>
-  // GAMIFICATION -- A DRAMEDY STARRING CRYSTAL ELSEY
+
+  // Gamification code for virtual vendor show's bronze level booths
+  // Used Java
 
   let boothId = window.location.pathname.split("/").pop();
 
@@ -17,7 +19,7 @@
 
   $(document).ready(function () {
     $.ajax({
-      url: `https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
+      url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
       type: "POST",
       dataType: "json",
       data: user,
@@ -29,7 +31,7 @@
       complete: function (data, status) {
         if (data.responseJSON === true) {
           $.ajax({
-            url: `https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=20&attendee=${userAttendeeId}&awarded=bronze${boothId}`,
+            url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/addPoints?points=20&attendee=${userAttendeeId}&awarded=bronze${boothId}`,
             type: "POST",
             headers: {
               "Access-Control-Allow-Headers": "Content-Type",
@@ -54,7 +56,7 @@
     let points = e.target.dataset.points;
     let awarded = boothId + clickId;
     $.ajax({
-      url: `https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
+      url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
       type: "POST",
       headers: {
         "Access-Control-Allow-Headers": "Content-Type",
@@ -64,7 +66,7 @@
       complete: function (data, status) {
         if (data.responseJSON === true) {
           $.ajax({
-            url: `https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=${points}&attendee=${userAttendeeId}&awarded=${awarded}`,
+            url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/addPoints?points=${points}&attendee=${userAttendeeId}&awarded=${awarded}`,
             type: "POST",
             headers: {
               "Access-Control-Allow-Headers": "Content-Type",
@@ -88,7 +90,7 @@
   var listener = window.addEventListener("blur", function () {
     if (document.activeElement === document.getElementById("featuredVideo")) {
       $.ajax({
-        url: `https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
+        url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
         type: "POST",
         dataType: "json",
         data: user,
@@ -100,7 +102,7 @@
         complete: function (data, status) {
           if (data.responseJSON === true) {
             $.ajax({
-              url: `https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=1&attendee=${userAttendeeId}&awarded=${boothId}featuredVideo`,
+              url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/addPoints?points=1&attendee=${userAttendeeId}&awarded=${boothId}featuredVideo`,
               type: "POST",
               headers: {
                 "Access-Control-Allow-Headers": "Content-Type",
@@ -126,7 +128,7 @@
   var listener = window.addEventListener("blur", function () {
     if (document.activeElement === document.getElementById("questionIframe")) {
       $.ajax({
-        url: `https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
+        url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
         type: "POST",
         dataType: "json",
         data: user,
@@ -138,7 +140,7 @@
         complete: function (data, status) {
           if (data.responseJSON === true) {
             $.ajax({
-              url: `https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=10&attendee=${userAttendeeId}&awarded=${boothId}question`,
+              url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/addPoints?points=10&attendee=${userAttendeeId}&awarded=${boothId}question`,
               type: "POST",
               headers: {
                 "Access-Control-Allow-Headers": "Content-Type",
