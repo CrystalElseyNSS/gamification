@@ -25,7 +25,7 @@
   let userPath;
   const getAttendeePath = () => {
     return fetch(
-      `https://us-central1-sw-leaderboard.cloudfunctions.net/getAttendee?attendee=${userAttendeeId}`
+      `https://us-central1-[PROJECT_NAME].cloudfunctions.net/getAttendee?attendee=${userAttendeeId}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -53,7 +53,7 @@
     getAttendeePath().then(function () {
       if (userPath === pathRoute) {
         $.ajax({
-          url: `https://us-central1-sw-leaderboard.cloudfunctions.net/record${routeCapitalized}Visit?attendee=${userAttendeeId}&booth=${boothId}`,
+          url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/record${routeCapitalized}Visit?attendee=${userAttendeeId}&booth=${boothId}`,
           type: "POST",
           data: user,
           headers: {
@@ -67,7 +67,7 @@
         });
       } else if (userPath !== pathRoute) {
         $.ajax({
-          url: `https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
+          url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
           type: "POST",
           dataType: "json",
           data: user,
@@ -79,7 +79,7 @@
           complete: function (data, status) {
             if (data.responseJSON === true) {
               $.ajax({
-                url: `https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=30&attendee=${userAttendeeId}&awarded=silver${boothId}`,
+                url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/addPoints?points=30&attendee=${userAttendeeId}&awarded=silver${boothId}`,
                 type: "POST",
                 headers: {
                   "Access-Control-Allow-Headers": "Content-Type",
@@ -106,7 +106,7 @@
     let points = e.target.dataset.points;
     let awarded = boothId + clickId;
     $.ajax({
-      url: `https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
+      url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
       type: "POST",
       dataType: "json",
       data: user,
@@ -118,7 +118,7 @@
       complete: function (data, status) {
         if (data.responseJSON === true) {
           $.ajax({
-            url: `https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=${points}&attendee=${userAttendeeId}&awarded=${awarded}`,
+            url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/addPoints?points=${points}&attendee=${userAttendeeId}&awarded=${awarded}`,
             type: "POST",
             headers: {
               "Access-Control-Allow-Headers": "Content-Type",
@@ -142,7 +142,7 @@
   var listener = window.addEventListener("blur", function () {
     if (document.activeElement === document.getElementById("featuredVideo")) {
       $.ajax({
-        url: `https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
+        url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
         type: "POST",
         dataType: "json",
         data: user,
@@ -154,7 +154,7 @@
         complete: function (data, status) {
           if (data.responseJSON === true) {
             $.ajax({
-              url: `https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=5&attendee=${userAttendeeId}&awarded=${boothId}featuredVideo`,
+              url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/addPoints?points=5&attendee=${userAttendeeId}&awarded=${boothId}featuredVideo`,
               type: "POST",
               headers: {
                 "Access-Control-Allow-Headers": "Content-Type",
@@ -180,7 +180,7 @@
   var listener = window.addEventListener("blur", function () {
     if (document.activeElement === document.getElementById("questionIframe")) {
       $.ajax({
-        url: `https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
+        url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/checkPathStatus?attendee=${userAttendeeId}`,
         type: "POST",
         dataType: "json",
         data: user,
@@ -192,7 +192,7 @@
         complete: function (data, status) {
           if (data.responseJSON === true) {
             $.ajax({
-              url: `https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=10&attendee=${userAttendeeId}&awarded=${boothId}question`,
+              url: `https://us-central1-[PROJECT_NAME].cloudfunctions.net/addPoints?points=10&attendee=${userAttendeeId}&awarded=${boothId}question`,
               type: "POST",
               headers: {
                 "Access-Control-Allow-Headers": "Content-Type",
